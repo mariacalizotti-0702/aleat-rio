@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiro ao Alvo - Neon Arcade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <div id="ui-header">
+      <div class="stat-box">
+        <span class="label">PONTOS</span>
+        <span id="score-val" class="value neon-yellow">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">TEMPO</span>
+        <span id="time-val" class="value neon-pink">30s</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">PRECISÃO</span>
+        <span id="acc-val" class="value neon-cyan">0.0%</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">COMBO</span>
+        <span id="combo-val" class="value neon-green">x1</span>
+      </div>
+    </div>
+
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas"></canvas>
+
+      <div id="start-screen" class="overlay">
+        <h1>TIRO AO ALVO</h1>
+        <p class="subtitle">DESAFIO DE 35% DE CHANCE DE ACERTO</p>
+        <p class="desc">Apenas a área central amarela do alvo garante o acerto válido (ocupa exatamente 35% da área total do alvo).</p>
+        <button id="start-btn" class="arcade-btn">INICIAR JOGO</button>
+      </div>
+
+      <div id="game-over-screen" class="overlay hidden">
+        <h1 class="neon-pink">FIM DE JOGO</h1>
+        <div class="results-box">
+          <p>Pontuação Final: <span id="final-score" class="neon-yellow">0</span></p>
+          <p>Disparos Totais: <span id="final-shots">0</span></p>
+          <p>Acertos Totais: <span id="final-hits">0</span></p>
+          <p>Precisão Geral: <span id="final-acc" class="neon-cyan">0.0%</span></p>
+          <p>Recorde: <span id="high-score" class="neon-green">0</span></p>
+        </div>
+        <button id="restart-btn" class="arcade-btn">JOGAR NOVAMENTE</button>
+      </div>
+    </div>
+
+    <div id="ui-footer">
+      <span>Dica: Tente encadear acertos rápidos para aumentar o combo e pontuar mais!</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
